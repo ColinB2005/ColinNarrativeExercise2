@@ -1,34 +1,51 @@
 title: Start
+position: -534,-29
 ---
-Narrator: Hi, I'm the narrator for this beginner's guide!
-Narrator: I'm talking to you with Yarn Spinner!
-Narrator: What do you think of all this, then?
-    -> It's alright, I guess.
-        <<jump Alright>>
-    -> It's great. I love it.
-        <<jump Love>>
+Hello, welcome to my game! To begin press continue!
+An SUV pulls up to a nice modern house on a suburban street.
+A caucasian woman named Savannah, who looks to be about 43, parks the car in the driveway and steps out.
+Savannah: Charlie come and help unpack and get off your game.
+-> Okay, I'll come right now!
+    <<jump unpack>>
+-> Give me a second, mom!
+    Savannah: I don't have time for this!
+    Savannah slaps the Nintendo Switch out of your hands
+    Charlie: Mom!
+    Savannah: Just come help me, please! It won't take long I promise.
+    Charlie: Okay fine.
+    <<jump unpack>>
 ===
 
-title: Alright
+title: unpack
+position: -283,-28
 ---
-Narrator: Well, that's not very nice.
-Narrator: I'm trying my best here.
-    -> Are you really? I don't think so.
-        Narrator: Well, I never!
-        Narrator: I'm going to have to have a word with the writer.
-    -> Oh, OK. I'm sorry.
-        Narrator: That's better.
-        Narrator: I'm glad we could resolve this.
+Savannah: Thank you!
+You begin unpacking the car while Savannah brings the first of the bags in.
+When you reach the door, you see Savannah standing in the foyer looking amazed.
+The foyer is impressive, a nice open area with stairs to the right and a clear view of the living room ahead.
+Savannah: It's beautiful! Come on let's get those bags upstairs!
+Savannah takes one of the bags you were carrying and rushes upstairs to her room.
+You follow right behind her with your bag in hand.
+You make it to your room and see just how much of an upgrade it is to your tiny apartment.
+Charlie: Wow! This is amazing! Well I should start to unpack, but a break would be nice.
+-> Start unpacking
+    You start to unpack and realize you have tons of dirty laundry in your bag from the nights in the motel.
+    Charlie: Let me start with the dirty clothes, god they smell.
+-> Play on your switch
+    When reaching for the switch in your bag you see all the dirty clothes stuffed inside your bag.
+    Charlie: Might as well quickly put these in the washer so they are clean when I'm finished gaming.
+You grab your dirty clothes and walk out of the room.
+In the hallway you hear loud snoring coming from the master bedroom.
+Charlie: Well she fell asleep quickly, I wonder if I should wake her up so she can actually unpack.
+-> Wake mom up
+    <<jump wakemother>>
+-> Let her sleep
+    I should probaby just let her get some rest, it's been a long day
 ===
 
-title: Love
+title: wakemother
 ---
-Narrator: Oh, you're too kind.
-Narrator: I'm just doing my job.
-    -> You're doing a great job.
-        Narrator: Oh, stop it, you.
-        Narrator: You're making me blush.
-    -> You're a natural.
-        Narrator: Oh, you.
-        Narrator: I'm but a humble narrator.
+You walk into the master bedroom where your mother is sleeping soundly.
+You get close right next to her ear.
+Charlie: Mom, wake up, we need to unpack!
 ===
