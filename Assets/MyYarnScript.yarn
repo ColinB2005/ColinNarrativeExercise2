@@ -3,15 +3,15 @@ position: -534,-29
 ---
 Hello, welcome to my game! To begin press continue!
 An SUV pulls up to a nice modern house on a suburban street.
-A caucasian woman named Savannah, who looks to be about 43, parks the car in the driveway and steps out.
-Savannah: Charlie come and help unpack and get off your game.
+Your mother, who looks to be about 43, parks the car in the driveway and steps out.
+Mom: Charlie come and help unpack and get off your game.
 -> Okay, I'll come right now!
     <<jump unpack>>
 -> Give me a second, mom!
-    Savannah: I don't have time for this!
-    Savannah slaps the Nintendo Switch out of your hands
+    Mom: I don't have time for this!
+    Mom slaps the Nintendo Switch out of your hands
     Charlie: Mom!
-    Savannah: Just come help me, please! It won't take long I promise.
+    Mom: Just come help me, please! It won't take long I promise.
     Charlie: Okay fine.
     <<jump unpack>>
 ===
@@ -19,12 +19,12 @@ Savannah: Charlie come and help unpack and get off your game.
 title: unpack
 position: -283,-28
 ---
-Savannah: Thank you!
-You begin unpacking the car while Savannah brings the first of the bags in.
-When you reach the door, you see Savannah standing in the foyer looking amazed.
+Mom: Thank you!
+You begin unpacking the car while Mom brings the first of the bags in.
+When you reach the door, you see Mom standing in the foyer looking amazed.
 The foyer is impressive, a nice open area with stairs to the right and a clear view of the living room ahead.
-Savannah: It's beautiful! Come on let's get those bags upstairs!
-Savannah takes one of the bags you were carrying and rushes upstairs to her room.
+Mom: It's beautiful! Come on let's get those bags upstairs!
+Mom takes one of the bags you were carrying and rushes upstairs to her room.
 You follow right behind her with your bag in hand.
 You make it to your room and see just how much of an upgrade it is to your tiny apartment.
 Charlie: Wow! This is amazing! Well I should start to unpack, but a break would be nice.
@@ -36,16 +36,175 @@ Charlie: Wow! This is amazing! Well I should start to unpack, but a break would 
     Charlie: Might as well quickly put these in the washer so they are clean when I'm finished gaming.
 You grab your dirty clothes and walk out of the room.
 In the hallway you hear loud snoring coming from the master bedroom.
+<<declare $momasleep = true>>
 Charlie: Well she fell asleep quickly, I wonder if I should wake her up so she can actually unpack.
 -> Wake mom up
     <<jump wakemother>>
 -> Let her sleep
-    I should probaby just let her get some rest, it's been a long day
+    <<jump laundryroom>>
 ===
 
 title: wakemother
+position: -6,-178
 ---
 You walk into the master bedroom where your mother is sleeping soundly.
 You get close right next to her ear.
 Charlie: Mom, wake up, we need to unpack!
+Mom doesn't move.
+-> Force her up
+    You shake your mothers arm violently
+    Mom: WHA- HELLO?
+    <<set $momasleep = false>>
+    Charlie: Mom you have to get up and finish unpacking!
+    Mom: Oh yeah, thank you honey, as soon as I hit the bed I fell asleep!
+    Charlie: Well come on get up and get moving!
+-> Let her sleep
+    You sneak out of the room and journey back to the laundry room.
+    <<jump laundryroom>>
+You get your mother out of bed and grab all her laundry.
+Mom: Oh thank you sweets, I've also got whites to go in so I'll come with you to the laundry room.
+You and mom go out into the hallway and make your way into the laundry room.
+You throw the big load of clothes in and shut the washer door.
+Charlie: Alright, one load in many more to go!
+Mom: I'm gonna leave the whites here so we can put them quick and easy when the load finishes.
+Suddenly, the washer begins to make a strange noise and lock the door and doesn't start the cycle.
+You grab the washer door handle and begin to shake it, but it won't budge.
+Charlie: The washer ate my clothes!
+Mom: Try unplugging it, maybe it'll unlock then.
+You climb on top of the washer and pull the power cord connecting to the washer.
+Charlie: Did it work?
+Mom: Did you unplug something? The washer is still on.
+You jump down off the washer and see that the washer is still fully powered, nothing changed.
+Charlie: Huh, that's weird.
+You start to hear a loud clicking sound coming from the main floor
+Charlie: What's that?
+Mom: I don't know, sounds like it's coming from the kitchen.
+You and mom both go down the stairs and towards the kitchen.
+Mom: You go downstairs and shut the power off for the laundry room and I'll go see what that sound is.
+You nod and open the door to the basement, it's extremely dark.
+<<jump basement>>
+===
+
+title: laundryroom
+---
+You continue towards the laundry room with your dirty clothes.
+You step into the laundry room, throw your load into the washer and shut the door.
+Charlie: Alright, one chore down!
+Suddenly, the washer begins to make a strange noise and lock the door and doesn't start the cycle.
+You grab the washer door handle and begin to shake it, but it won't budge.
+-> Intimidate the washer
+    You size up the washer
+    Charlie: Well, if you don't open up then I'll be forced to turn you off, you don't want that do you?
+    The laundry machine does not respond
+    Charlie: So you want to be shut off, fine. Well I'm going to do it! You can't stop me!
+    The laundry machine does not respond
+    You give up and start making your way out of the room
+-> Flip the breaker for the laundry room in the basement
+    You start making your way out of the room
+You head down the stairs and go to the basement door. You open it and it's pitch black.
+<<jump basement>>
+===
+
+title: basement
+position: 278,-61
+---
+You turn on the light and make your way downstairs.
+Once downstairs you spot the junction box.
+Charlie: Bingo!
+<<if $momasleep == false>>
+    The clicking sound disappears and 
+<<else>>
+    You hear a loud clicking coming from the main floor.
+    You ignore it and continue moving on.
+<<endif>>
+You walk up to the junction box and flip the laundry room breaker.
+When flipping the laundry room breaker it ends up flipping all the breakers, making the whole house pitch black.
+<<if $momasleep == true>>
+The clicking from the main floor stops, your mother has probably woken up.
+<<endif>>
+Charlie: What the hell, why does everything have to be so complicated.
+As you fiddle around with the junction box a light appears behind you at the bottom of the staircase.
+-> Investigate the light
+    You walk under the light and feel a nice warmth, you look up and the light gets destroyed.
+    Charlie is lost to the house.
+    <<jump savannah>>
+-> Keep messing around with the junction box
+    You decide to keep messing around with the junction box.
+    The light comes closer
+    <<wait 3>>
+    The light comes even closer
+    You keep messing around with the junction box frantically.
+    <<wait 3>>
+    The light is above you
+    You look up
+    <<wait  3>>
+    The light gets really bright and you shut your eyes.
+    When you open your eyes all the lights are on.
+    Charlie: What the hell. Mom!
+    You run up the stairs and enter the foyer.
+    <<jump Together>>
+===
+
+title: Together
+position: 573,-245
+---
+When you get upstairs you see your mother in the foyer, looking scared.
+Charlie: Mom! Something is wrong with this house!
+Your mother is standing in shock looking towards the laundry room.
+The washer is on.
+Charlie: That doesn't make sense, the power to the laundry room should be off!
+-> Investigate the laundry room
+    <<jump ending1>>
+-> Get out of the house
+    <<jump ending2>>
+===
+
+title: savannah
+position: 575,-61
+---
+<<wait 2>>
+You are now in control of your mother, Savannah.
+You walk out of the kitchen and into the foyer looking for Charlie, but cannot find him.
+You open the basement door.
+Savannah: Charlie! Are you down there?
+<<wait 1>>
+Nobody responds to you.
+You go downstairs and try to find Charlie.
+Savannah: Charlie come out here right now!
+<<wait 1>>
+Nobody responds to you.
+
+===
+
+title: ending1
+position: 823,-382
+---
+You cautiously walk up the stairs and into the laundry room, your mother follows you.
+Mom: We should get out of here, I don't like this house
+Charlie: It's probably just some electrical issues or something, no need to overreact.
+Once inside the laundry room the smoke alarms start blaring loudly.
+Mom: Let's get out of here, NOW!
+The laundry room door shuts
+the darkness consumes you both
+You are both lost to the house.
+You've unlocked the Bad Ending. Ending 1 of 3
+===
+
+title: ending2
+position: 827,-233
+---
+You and your mother both bolt out of the house and get inside the SUV.
+You drive off and never turn back.
+<<wait 4>>
+1 year later
+<<wait 2>>
+A new car drives into the driveway.
+A family of 3 get out and walk into the house excited.
+You've unlocked the Canon Ending. Ending 2 of 3
+===
+
+title: ending3
+position: 832,-59
+---
+
 ===
