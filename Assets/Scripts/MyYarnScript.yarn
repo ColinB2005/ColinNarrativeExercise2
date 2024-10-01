@@ -160,7 +160,7 @@ Charlie: That doesn't make sense, the power to the laundry room should be off!
 ===
 
 title: savannah
-position: 575,-61
+position: 572,-60
 ---
 <<wait 2>>
 You are now in control of your mother, Savannah.
@@ -173,7 +173,15 @@ You go downstairs and try to find Charlie.
 Savannah: Charlie come out here right now!
 <<wait 1>>
 Nobody responds to you.
-
+You reach the bottom of the stairs and a light appears.
+The light is above the junction box.
+A distorted voice: Mom?
+-> Charlie?
+    Savannah: Oh my god!
+-> What the hell!
+    Savannah: Charlie is that you!
+Charlie *distorted*: Mom! Help me!
+<<jump ending3>>
 ===
 
 title: ending1
@@ -206,5 +214,16 @@ You've unlocked the Canon Ending. Ending 2 of 3
 title: ending3
 position: 832,-59
 ---
-
+10 years later
+<<wait 2>>
+The house looks more rundown and abandoned, a podcast plays.
+Podcaster: Hello listeners, sit tight as this episode will be especially dark.
+Podcaster: About 10 years ago, a 16 year old boy named Charlie dissappeared from his house and hasn't been seen since.
+Podcaster: That's not even the strangest thing about this story though!
+Podcaster: His mother was not upset at all and claimed he was inside the house!
+Podcaster: The police searched the house up and down and couldn't find anyone.
+Podcaster: The mother was then put on trial for the murder of her son but her lawyer got her off on insanity and lack of evidence.
+Podcaster: Since then she has been living in the same house, not allowing anyone to step foot inside!
+Podcaster: Now the next part is shocking! But first I'd like to thank our sponsors!
+You've unlocked the Podcast ending. Ending 3 of 3
 ===
